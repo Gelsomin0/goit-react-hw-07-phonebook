@@ -1,16 +1,18 @@
+import { useEffect } from "react";
+import { ContactsList } from "./index";
+import { useDispatch } from "react-redux";
+import { fetchContacts } from "redux/contactsFetch";
+
 export const App = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
+
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+      <ContactsList />
     </div>
   );
 };
