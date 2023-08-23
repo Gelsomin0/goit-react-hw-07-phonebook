@@ -1,7 +1,8 @@
 import { useEffect } from "react";
-import { ContactsList, ContactForm } from "./index";
+import { ContactsList, ContactForm, Filter } from "./index";
 import { useDispatch } from "react-redux";
 import { fetchContacts } from "redux/contactsFetch";
+import toast, { Toaster } from 'react-hot-toast';
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -12,7 +13,9 @@ export const App = () => {
 
   return (
     <div>
+      <Toaster/>
       <ContactForm />
+      <Filter />
       <ContactsList />
     </div>
   );
