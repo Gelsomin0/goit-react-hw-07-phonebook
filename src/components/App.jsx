@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { ContactsList } from "./index";
+import { ContactsList, ContactForm } from "./index";
 import { useDispatch } from "react-redux";
 import { fetchContacts } from "redux/contactsFetch";
 
@@ -12,6 +12,7 @@ export const App = () => {
 
   return (
     <div>
+      <ContactForm />
       <ContactsList />
     </div>
   );

@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchContacts } from "./contactsFetch";
+import { fetchContacts, addContact, deleteContact } from "./contactsFetch";
 
 export const contactSlice = createSlice({
     name: 'contacts',
@@ -11,6 +11,12 @@ export const contactSlice = createSlice({
     extraReducers: {
         [fetchContacts.fulfilled]: (state, action) => {
             state.items = action.payload;
+        },
+        [addContact.fulfilled]: (state, action) => {
+            state.items.push(action.payload);
+        },
+        [deleteContact.fulfilled]: (state, action) => {
+            state.items = state.items.filter(item => item.id !== action.payload.id);
         }
     }
 });
