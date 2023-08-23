@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { changeFilterState } from "redux/filterSlice";
 import css from './Filter.module.css';
