@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { ContactsList, ContactForm, Filter } from "./index";
 import { useDispatch } from "react-redux";
 import { fetchContacts } from "redux/contactsFetch";
-import toast, { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 
 export const App = () => {
   const dispatch = useDispatch();

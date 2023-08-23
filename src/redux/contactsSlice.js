@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchContacts, addContact, deleteContact } from "./contactsFetch";
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 const addedContact = ({ name }) => toast.success(`Contact ${name} is added`);
 const deletedContact = ({ name }) => toast.error(`Contact ${name} is deleted`);
